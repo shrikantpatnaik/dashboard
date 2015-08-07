@@ -1,1 +1,13 @@
-<div data-bind="value"></div>
+<h3 class="title" data-bind="title"></h1>
+<table>
+  <tr>
+    <th>Name</td>
+    <th>Response</td>
+    <th>Uptime</td>
+  </tr>
+  <tr data-foreach-item="items" >
+    <td class="name" data-bind="item.name" ></td>
+    <td class="response" data-bind="item.response_time"></td>
+    <td class="uptime" data-bind="item.uptime"></td>
+  </tr>
+</table>
