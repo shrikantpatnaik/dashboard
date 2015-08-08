@@ -30,6 +30,7 @@ GEM
     gmail_xoauth (0.4.1)
       oauth (>= 0.3.6)
     hike (1.2.3)
+    icalendar (2.3.0)
     mail (2.6.3)
       mime-types (>= 1.16, < 3)
     mime-types (2.6.1)
@@ -80,4 +81,5 @@ DEPENDENCIES
   dashing
   faraday
   gmail
+  icalendar
   uptimerobot

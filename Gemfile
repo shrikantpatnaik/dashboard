@@ -7,3 +7,5 @@ gem 'uptimerobot'
 gem 'faraday'
 
 gem 'gmail'
+
+gem 'icalendar'
