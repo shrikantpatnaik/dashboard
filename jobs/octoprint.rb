@@ -21,11 +21,13 @@ SCHEDULER.every '30s', :first_in => 0 do |job|
   else
     "unknown"
   end
-
+  filename = parsed_response['job']['file']['name']
+  filename.slice! ".gcode"
+  progress = (parsed_response['progress']['completion'] * 100).round.to_f/100
   data = {
-    progress:  "#{(parsed_response['progress']['completion'] * 100).round.to_f/100}%",
+    progress:  "#{progress}%",
     state: parsed_response['state'],
-    job: parsed_response['job']['file']['name'],
+    job: filename,
     time_left: time_left
   }
   send_event('octoprint', data)

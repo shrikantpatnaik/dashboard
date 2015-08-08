@@ -6,4 +6,5 @@ class Dashing.Octoprint extends Dashing.Widget
   onData: (data) ->
     if data.state != "Printing"
         $(@node).find('.current_job').hide()
-        
+    else
+        $(@node).find('.current_job').show()  
