@@ -38,9 +38,9 @@ $hot: #ff5131; // 25 and above
   .warm { background-color: $warm; }
   .hot { background-color: $hot; }
 
-  #right-now, #today, #this-week {
+  #right-now, #today {
     float: left;
-    width: 33%;
+    width: 50%;
     height: 100%;
 
     .column-inner {
@@ -79,25 +79,6 @@ $hot: #ff5131; // 25 and above
       .details-text-only {
         font-size: $info;
         margin-top: 10px;
-      }
-
-      .upcoming-week {
-        margin: 15px 0 15px 50px;
-        text-align: left;
-
-        p {
-          font-size: $info;
-          margin: -5px 0;
-
-          .weather-icon-inline {
-            max-width: 50px;
-            margin: -5px;
-          }
-          .weather-icon-inline.large {
-            max-width: 60px;
-            margin: -10px;
-          }
-        }
       }
 
       .powered-by {

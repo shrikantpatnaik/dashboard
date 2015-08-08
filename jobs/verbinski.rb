@@ -54,21 +54,8 @@ SCHEDULER.every '5m', :first_in => 0 do |job|
     icon: daily["icon"]
   }
 
-  this_week = []
-  for day in (1..7)
-    day = forecast["daily"]["data"][day]
-    this_day = {
-      max_temp: day["temperatureMax"].round,
-      min_temp: day["temperatureMin"].round,
-      time: day_to_str(day["time"]),
-      icon: day["icon"]
-    }
-    this_week.push(this_day)
-  end
-
   send_event('verbinski', {
     current: current,
     today: today,
-    upcoming_week: this_week,
   })
 end
