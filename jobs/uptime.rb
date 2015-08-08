@@ -14,7 +14,8 @@ SCHEDULER.every '5m', :first_in => 0 do |job|
     monitors << {
       name: monitor['friendlyname'],
       uptime: monitor['customuptimeratio'],
-      response_time: monitor['responsetime'].nil? ? "?" : monitor['responsetime'].first['value']
+      response_time: monitor['responsetime'].nil? ? "?" : monitor['responsetime'].first['value'],
+      status: monitor['status'],
     }
   end
   send_event('uptime-robot', { items: monitors})
