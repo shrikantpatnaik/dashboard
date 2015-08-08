@@ -1,16 +1,13 @@
 require 'date'
 require 'net/https'
 require 'json'
-require 'yaml'
-
-config = YAML.load_file("config.yml")
 
 # Forecast API Key from https://developer.forecast.io
-forecast_api_key = config['forecast']['api_key']
+forecast_api_key = ENV['forecast_api_key']
 
 # Latitude, Longitude for location
-forecast_location_lat = config['forecast']['lattitude']
-forecast_location_long = config['forecast']['longitude']
+forecast_location_lat = ENV['forecast_lattitude']
+forecast_location_long = ENV['forecast_longitude']
 
 # Unit Format
 forecast_units = "ca" # like "si", except windSpeed is in kph

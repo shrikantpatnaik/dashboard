@@ -1,9 +1,6 @@
 require 'uptimerobot'
-require 'yaml'
 
-config = YAML.load_file("config.yml")
-
-client = UptimeRobot::Client.new(apiKey: config["uptime_robot"]["api_key"])
+client = UptimeRobot::Client.new(apiKey: ENV['uptime_robot_api_key'])
 
 # :first_in sets how long it takes before the job is first run. In this case, it is run immediately
 SCHEDULER.every '5m', :first_in => 0 do |job|

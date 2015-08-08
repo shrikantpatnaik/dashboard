@@ -1,8 +1,7 @@
 require 'dashing'
-require 'yaml'
 
 configure do
-  set :auth_token, 'YOUR_AUTH_TOKEN'
+  set :auth_token, ENV['auth_token']
   set :default_dashboard, 'main'
 
   helpers do
