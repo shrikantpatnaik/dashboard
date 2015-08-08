@@ -69,4 +69,5 @@ PLATFORMS
 
 DEPENDENCIES
   dashing
+  faraday
   uptimerobot

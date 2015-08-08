@@ -1,0 +1,22 @@
+$background-color:  #acc612;
+$value-color:       #fff;
+
+$title-color:       rgba(255, 255, 255, 0.7);
+
+.widget-octoprint {
+  background-color: $background-color;
+  margin: 30px;
+
+  .title {
+    color: $title-color;
+    margin-bottom: 50px;
+  }
+
+  .name {
+    padding: 10px;
+  }
+
+  table td {
+    font-size: 20px;
+  }
+}
