@@ -5,3 +5,5 @@ gem 'dashing'
 gem 'uptimerobot'
 
 gem 'faraday'
+
+gem 'gmail'
