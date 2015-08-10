@@ -20,7 +20,15 @@ SCHEDULER.every '30s', :first_in => 0 do |job|
   end
   filename = parsed_response['job']['file']['name']
   filename.slice! ".gcode"
-  progress = (parsed_response['progress']['completion'] * 100).round.to_f/100
+  if filename.size > 17
+    filename = filename[0..16] + ".."
+  end
+
+  progress = if parsed_response['progress']['completion'].nil?
+      "unknown"
+    else
+      (parsed_response['progress']['completion'] * 100).round.to_f/100
+    end
   data = {
     progress:  "#{progress}%",
     state: parsed_response['state'],
